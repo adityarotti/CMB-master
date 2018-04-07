@@ -1,0 +1,27 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module test ! in 
+    interface  ! in :test
+        function add_ii(a,b) ! in :test:test.f90
+            integer*8 :: a
+            integer*8 :: b
+            integer*8 :: add_ii
+        end function add_ii
+        subroutine add_array(a,b,c,sz) ! in :test:test.f90
+            integer*8 dimension(sz),intent(in) :: a
+            integer*8 dimension(sz),intent(in),depend(sz) :: b
+            integer*8 dimension(sz),intent(out),depend(sz) :: c
+            integer*8, optional,intent(in),check(len(a)>=sz),depend(a) :: sz=len(a)
+        end subroutine add_array
+        subroutine radd_array(a,b,c,sz) ! in :test:test.f90
+            real*8 dimension(sz),intent(in) :: a
+            real*8 dimension(sz),intent(in),depend(sz) :: b
+            real*8 dimension(sz),intent(out),depend(sz) :: c
+            integer*8, optional,intent(in),check(len(a)>=sz),depend(a) :: sz=len(a)
+        end subroutine radd_array
+    end interface 
+end python module test
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/

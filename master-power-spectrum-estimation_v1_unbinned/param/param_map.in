@@ -1,0 +1,8 @@
+!######## INPUT/OUTPUT parameters #########################################
+"MAP"				--> Datatype : "MAP"/"CL"
+512,512,256			--> Lmax, Masklmax, Nside
+"./data/in/mask1.fits"		--> Maskfile
+1 1				--> Nstart, nrlz
+"./data/in/masked_cmb.fits"	--> Srefix
+".fits"				--> Suffix
+"./data/out/mapin_"		--> Pathout

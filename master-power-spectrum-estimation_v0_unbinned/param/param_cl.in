@@ -1,0 +1,8 @@
+!######## INPUT/OUTPUT parameters #########################################
+"CL"				--> Datatype : "MAP"/"CL"
+512,512,256			--> Lmax, Masklmax, Nside
+"./data/in/mask_cl.fits"	--> Maskfile
+1 1				--> Nstart, nrlz
+"./data/in/clmd.fits"		--> Prefix
+".fits"				--> Suffix
+"./data/out/clin_"		--> Pathout
